@@ -1,0 +1,52 @@
+using System;
+
+namespace Csharp_Learning
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   
+            //type safety = tip güvenliği için str olduğunu belirttik. py ye göre;
+            string kategorietiketi = "Kategoriler";  //str ifadelerin yazılış biçimi,
+            int ogrencisayisi = 32000;  //int ifadelerin yazılış biçimi,
+            double faizorani = 1.43;  //double ifadelerin yazılış biçimi,
+            Boolean sistemgiris = false;  //bool komutu,
+
+            if (sistemgiris == true)   //şart ifadesi,
+            {
+                Console.WriteLine("Kulanncı ayarları butonu.");
+            }
+            else
+            {
+                Console.WriteLine("Sisteme giriş yapılmadı.");
+            }
+            Console.WriteLine(kategorietiketi);  //ve bildiğimiz print() komutu.
+
+            Console.WriteLine(ogrencisayisi);
+
+            Console.WriteLine(faizorani);
+
+            Console.WriteLine(sistemgiris);
+
+
+               ///---\\\
+            // \\\---/// \\
+
+            double dolardun = 7.3563;
+            double dolarbugun = 7.35630;
+
+            if (dolarbugun > dolardun)  //pyde ki if komutu
+            {
+                Console.WriteLine("Artış okunu yazdır.");
+            }
+            else if(dolarbugun < dolardun)  //pyde ki elif komutu
+            {
+                Console.WriteLine("Azalış okunu yazdır.");
+            }
+            else  //pyde ki else komutu
+            {
+                Console.WriteLine("Değişmedi");
+            }
+        }
+    }
+}
