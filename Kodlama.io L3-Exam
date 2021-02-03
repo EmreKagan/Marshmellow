@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ClassMetotDemo
+{
+    class Musteri_Manager
+    {
+        public void MKart_Bilgi(Musteri MKART) 
+        {
+            Console.WriteLine("Kullanıcı kart bilgileri : ");
+            Console.WriteLine("Kullanıcı Adı : " + " " + MKART.Musteri_Adi);
+            Console.WriteLine("Kullanıcı Kimlik No : " + " " + MKART.Musteri_IDN);
+            Console.WriteLine("Kullanıcı Kart No : " + " " + MKART.MKart_No);
+            Console.WriteLine("Kullanıcı Kart CVC : " + " " + MKART.MKart_CVC);
+            Console.WriteLine("Kullanıcı Kart SGT : " + " " + MKART.MKart_SGT);
+        }
+    }
+}
+
+[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ClassMetotDemo
+{
+    class Musteri
+    {
+        public string Musteri_Adi { get; set; }
+
+        public long Musteri_IDN { get; set; }
+
+        public long MKart_No{ get; set; }
+
+        public double Musteri_OGelir { get; set; }
+
+        public int MKart_CVC { get; set; }
+
+        public string MKart_SGT { get; set; }
+    }
+}
+
+[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]
+
+using System;
+
+namespace ClassMetotDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Musteri Ahmet = new Musteri();
+            Ahmet.Musteri_Adi = "Ahmet Gök";
+            Ahmet.Musteri_IDN = 24946893523;
+            Ahmet.Musteri_OGelir = 6500;
+            Ahmet.MKart_No = 6485396810163805;
+            Ahmet.MKart_CVC = 492;
+            Ahmet.MKart_SGT = "11/30";
+
+            Musteri Ahsen = new Musteri();
+            Ahsen.Musteri_Adi = "Ahsen Tatlı";
+            Ahsen.Musteri_IDN = 26048925132;
+            Ahsen.Musteri_OGelir = 8000;
+            Ahsen.MKart_No = 7485925010161806;
+            Ahsen.MKart_CVC = 237;
+            Ahsen.MKart_SGT = "10/31";
+
+            Musteri Deniz = new Musteri();
+            Deniz.Musteri_Adi = "Deniz Kara";
+            Deniz.Musteri_IDN = 27391893573;
+            Deniz.Musteri_OGelir = 7600;
+            Deniz.MKart_No = 5035396820639519;
+            Deniz.MKart_CVC = 178;
+            Deniz.MKart_SGT = "8/29";
+
+            Musteri[] MKart = new Musteri[] {Ahmet, Ahsen, Deniz};
+
+            Musteri_Manager musterikart = new Musteri_Manager();
+
+            musterikart.MKart_Bilgi(Ahmet);
+            musterikart.MKart_Bilgi(Ahsen);
+            musterikart.MKart_Bilgi(Deniz);
+        }
+
+    }
+}
