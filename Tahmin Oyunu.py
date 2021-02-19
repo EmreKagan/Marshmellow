@@ -1,23 +1,23 @@
-Can = 5
-Sayac = 0
+Heart = 5
+Rount = 0
 
-while Can > 0:
+while Heart > 0:
     import random
 
-    Aralık = random.randint(0,10)
+    Range = random.randint(0,20)
 
-    Can = Can - 1
-    Sayac = Sayac + 1
-    chance = int(input("Sayıyı Tahmin Ediniz : "))
+    Heart = Heart - 1
+    Rount = Rount + 1
+    Chance = int(input("Guess the number : "))
 
-    if chance < Aralık:
-        farkK = Aralık - chance
-        print(f"Tahmininiz, sayının {farkK} eksiği.")
-    elif chance > Aralık:
-        farkB = chance - Aralık
-        print(f"Tahmininiz, sayının {farkB} fazlası.")
+    if Chance < Range:
+        CWl = Range - Chance
+        print(f"Your guess is {CWl} less than the number..")
+    elif chance > Range:
+        CWh = Chance - Range
+        print(f"Your guess is {CWh} more than the number.")
     else:
-        print(f"{Sayac} adet tahmin sonucu DOĞRU CEVAP. Punınız {120 - Sayac*20}")
-    if Can == 0:
+        print(f"CORRECT ANSWER after {Rount} guess.. Your score : {120 - Rount*20}")
+    if Heart == 0:
         print("!!!!GAME OVER. TRY AGAİN.!!!!")
         break
