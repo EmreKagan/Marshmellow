@@ -1,4 +1,4 @@
-DF = []
+DV = []
 
 Edge = int(input("Enter the max character amount : "))
 
@@ -13,11 +13,11 @@ while Edge > 0:
     epo = float(input("Enter a exponent : "))
 
     if epo != 0:
-        df = nc*epo*x**(epo-1)
+        dv = nc*epo*x**(epo-1)
     else:
-        df = 0
+        dv = 0
 
-    DF.append(df)
-    result = sum(DF)
+    DV.append(dv)
+    result = sum(DV)
 
 print(result)
